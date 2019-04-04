@@ -1,9 +1,9 @@
 import Home from './Home';
 import Video from './Video';
-import Uploader from './Uploader';
+import Upload from './Uploader';
 
 export default {
   Home,
   Video,
-  Uploader,
+  Upload,
 }

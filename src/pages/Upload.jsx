@@ -3,7 +3,7 @@ import { Typography } from '@material-ui/core';
 import { withRouter } from 'react-router';
 import UploadWidget from '../components/UploadWidget'
 
-class Uploader extends Component {
+class Upload extends Component {
   render() {
     return (
     <div>
@@ -23,4 +23,4 @@ class Uploader extends Component {
   }
 }
 
-export default withRouter(Uploader);
+export default withRouter(Upload);
