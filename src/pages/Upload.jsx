@@ -10,7 +10,7 @@ class Upload extends Component {
       <div className='videoPlayer'>
         <div className='textBeforeVid'>
           <Typography component='h2' variant='display2'>
-            Uploader
+            Upload Video
           </Typography>
         </div>
       </div>
