@@ -20,6 +20,7 @@ class App extends Component {
 					<IndexRoute component={Pages.Home} />
 
 					<Route path="/video" component={Pages.Video} />
+					<Route path="/upload" component={Pages.Uploader} />
 				</Route>
 			</Router>
 		);
