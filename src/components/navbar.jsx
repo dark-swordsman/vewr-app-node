@@ -7,6 +7,7 @@ import Typography from '@material-ui/core/Typography';
 import Button from '@material-ui/core/Button';
 import IconButton from '@material-ui/core/IconButton';
 import MenuIcon from '@material-ui/icons/Menu';
+import  logo  from '../assets/Vewr.png';
 
 
 const styles = {
@@ -20,10 +21,15 @@ const styles = {
 		marginLeft: -12,
 		marginRight: 20
 	},
-	Tooly: {
+	Tooly: { //NavbarColor
 		background: '#0085ff',
 		color: '#ffffff',
 		
+	},
+
+	logo: {
+		width:'7%',
+		height:'7%',
 	}
 };
 
@@ -36,13 +42,13 @@ class NavBar extends Component {
 		console.log(classes.root);
 		return (
 			<div className={classes.root}>
-				<AppBar position='static'>
+				<AppBar position='static' title={<img src="https://unsplash.it/40/40"/>}>
 					<Toolbar className={classes.Tooly}>
 						<IconButton className={classes.menuButton} color='inherit' aria-label='Menu'>
 							<MenuIcon />
 						</IconButton>
-						<Typography variant='h6' color='inherit' className={classes.grow}>
-							Vewr
+						<img className={classes.logo} src={logo} /><Typography variant='h6' color='inherit' className={classes.grow}>
+							
 						</Typography>
 						<Button color='inherit'>Login</Button>
 						<Button color='inherit'>SignUp</Button>

@@ -3,7 +3,9 @@ import PropTypes from 'prop-types';
 import { withStyles } from '@material-ui/core/styles';
 import Button from '@material-ui/core/Button';
 import CloudUploadIcon from '@material-ui/icons/CloudUpload';
-import color from '@material-ui/core/colors/orange';
+import TextField from '@material-ui/core/TextField'
+import NavigationIcon from '@material-ui/icons/Navigation'
+import Fab from '@material-ui/core/Fab'
 
 
 const styles = theme => ({
@@ -14,12 +16,27 @@ const styles = theme => ({
 	},
 
 	button: {
-		margin: '4em',
+		margin: theme.spacing.unit,
+		
 	},
 	
 	input: {
 		display: 'none',
 	},
+	rightIcon: {
+		marginLeft: theme.spacing.unit,
+	  },
+	  iconSmall: {
+		fontSize: 20,
+	  },
+	  textField: {
+		marginLeft: theme.spacing.unit,
+		marginRight: theme.spacing.unit,
+		width: 200,
+	  },
+	  container: {
+		margin: '2.6em',
+	  }
 
 	
 	
@@ -64,20 +81,46 @@ class uploadWidget extends Component {
 	render() {
 		const { classes } = this.props;
 		return (
-		<div className="test">
+		<div className={classes.container}>
+			<TextField
+          id="standard-with-placeholder"
+          label="Video Title"
+          placeholder="Placeholder"
+          className={classes.textField}
+          margin="normal"
+        />
+		<TextField
+          id="standard-with-placeholder"
+          label="Description"
+          placeholder="Placeholder"
+          className={classes.textField}
+          margin="normal"
+        />
+		
+		<div>
 				 <input
         accept="image/*"
         className={classes.input}
-        id="outlined-button-file"
+        id="submitter"
         multiple
         type="file"
       />
-      <label htmlFor="outlined-button-file">
-        <Button variant="outlined" component="span" className={classes.button} onClick={() => this.uploadVideo()}>
-          Upload
+      <label htmlFor="submitter">
+	  
+        <Button variant="contained" component="span" className={classes.button} onClick={() => this.uploadVideo()}>
+          Choose file
+		
         </Button>
+		
+		
       </label>
+	  <Fab variant="extended" color="" aria-label="Add" className={classes.margin}>
+          
+          Upload
+		  <CloudUploadIcon className={classes.rightIcon} />
+        </Fab>
 			
+		</div>
 		</div>
 			
 		);
