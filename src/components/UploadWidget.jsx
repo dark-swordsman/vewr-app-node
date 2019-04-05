@@ -12,7 +12,10 @@ const styles = theme => ({
 	root: {
 		flexGrow: 1,
 		overflow: 'hidden',
-		padding: `0 ${theme.spacing.unit * 3}px`
+		padding: `0 ${theme.spacing.unit * 3}px` ,
+		alignItems: 'center',
+		
+		
 	},
 
 	button: {
@@ -81,7 +84,7 @@ class uploadWidget extends Component {
 	render() {
 		const { classes } = this.props;
 		return (
-		<div className={classes.container}>
+		<div style={{display: 'flex',  justifyContent:'center', alignItems:'center', height: '30vh'}} className={classes.container}>
 			<TextField
           id="standard-with-placeholder"
           label="Video Title"
