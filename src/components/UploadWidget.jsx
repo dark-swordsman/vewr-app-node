@@ -3,6 +3,7 @@ import PropTypes from 'prop-types';
 import { withStyles } from '@material-ui/core/styles';
 import Button from '@material-ui/core/Button';
 import CloudUploadIcon from '@material-ui/icons/CloudUpload';
+import color from '@material-ui/core/colors/orange';
 
 
 const styles = theme => ({
@@ -13,12 +14,15 @@ const styles = theme => ({
 	},
 
 	button: {
-		margin: theme.spacing.unit,
+		margin: '4em',
 	},
 	
 	input: {
 		display: 'none',
 	},
+
+	
+	
 });
 
 const message = 'test';
@@ -60,7 +64,7 @@ class uploadWidget extends Component {
 	render() {
 		const { classes } = this.props;
 		return (
-		<div>
+		<div className="test">
 				 <input
         accept="image/*"
         className={classes.input}
